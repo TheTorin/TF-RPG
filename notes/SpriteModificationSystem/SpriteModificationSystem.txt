@@ -1,0 +1,39 @@
+Current plan:
+
+a) All sprites and animations are split into their component limbs
+	i.e There is a werewolf left arm sprite. This sprite has every animation that will be used, 
+	but only for the left arm.
+	
+b) All chars start as the default sprite
+	This is just an amalgamation of each chars unique limbs in each frame.
+	
+c) As transformations take place, we replace the relevant limbs/body/head
+	We do this in the following manner:
+	
+	1) Find each limb that the char has i.e human head, chest, e.t.c with werewolf left arm.
+			This will be stored in scr_partyData for easy access
+			
+	2) Looping through each animation that the char uses (idle, attack):
+			We reference each limbs animation of that (i.e HumanHeadIdle, WerewolfLAttack)
+			We create a surface to draw on
+			We then loop through each frame of each animation, drawing the limbs onto this surface
+			Once the animation has been fully drawn, we have the character use those animations instead
+				by switching the references in scr_partyData
+	
+	3) We overwrite the char animations by saving them as well.
+		Reminder to sprite_delete() the old sprites before replacing them!
+		
+
+(Reference code from sprite_save which looks like good template code to repurpose:)
+var surf, spr_custom;
+surf = surface_create(32, 32);
+surface_set_target(surf);
+draw_clear_alpha(c_black, 0);
+draw_sprite(spr_Body, 0, 0, 0);
+draw_sprite(spr_Clothes, 0, 0, 0);
+draw_sprite(spr_Hair, 0, 0, 0);
+spr_custom = sprite_create_from_surface(surf, 0, 0, 32, 32, true, true, 16, 16);
+surface_reset_target();
+surface_free(surf);
+sprite_save(spr_custom, 0, "Player_Custom_Sprite.png");
+sprite_delete(spr_Custom);
