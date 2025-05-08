@@ -100,8 +100,8 @@ function updateSprites(partyMember) {
 	surf = surface_create(64, 64);
 	surface_set_target(surf);
 		
-	var anims = variable_struct_get_names(CURR_SPR);
-	array_pop(anims);
+	//var anims = variable_struct_get_names(CURR_SPR);
+	var anims = ["Idle"];
 	//Each animation/sprite
 	for (var i = 0; i < array_length(anims); i++) {
 		//Each frame

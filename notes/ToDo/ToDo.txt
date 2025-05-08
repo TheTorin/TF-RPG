@@ -1,0 +1,7 @@
+Implement state machine into player
+	i.e stop them from moving during text boxes
+	
+Redo all inputs to use the new input system
+	Notably in, you guessed it, the player!
+	
+Battle text! Battle mana?

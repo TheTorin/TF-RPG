@@ -1,4 +1,5 @@
-//Return fixed placement. If party is missing characters, then it will highlight their absence
+//Return fixed placement. [right box][left box]
+//[x, y, w, h]
 function getBoxPlacement(_bg) {
 	switch(_bg) {
 		case spr_TestBG:

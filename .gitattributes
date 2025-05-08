@@ -1,5 +1,6 @@
 # Ignore .yy files for language statistics
 *.yy linguist-generated=true
+*.yy linguist-language=GML
  
 # force LF for metadata files for merge simplicity
 *.gml text eol=lf
