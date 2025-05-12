@@ -478,6 +478,7 @@
     {"id":{"name":"spr_tHumanLLegIdle","path":"sprites/spr_tHumanLLegIdle/spr_tHumanLLegIdle.yy",},},
     {"id":{"name":"spr_tHumanRArmIdle","path":"sprites/spr_tHumanRArmIdle/spr_tHumanRArmIdle.yy",},},
     {"id":{"name":"spr_tHumanRLegIdle","path":"sprites/spr_tHumanRLegIdle/spr_tHumanRLegIdle.yy",},},
+    {"id":{"name":"spr_unknown","path":"sprites/spr_unknown/spr_unknown.yy",},},
     {"id":{"name":"spr_WallTemp","path":"sprites/spr_WallTemp/spr_WallTemp.yy",},},
   ],
   "resourceType":"GMProject",

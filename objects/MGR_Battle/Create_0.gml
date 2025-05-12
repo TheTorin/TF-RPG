@@ -22,6 +22,7 @@ battleWaitTimeRemaining = 0;
 currentUser = noone;
 currentAction = -1;
 currentTargets = noone;
+battleText = "";
 
 cursor = 
 {
@@ -126,7 +127,12 @@ function BeginAction(_user, _action, _targets) {
 	currentUser = _user;
 	currentAction = _action;
 	currentTargets = _targets;
+	var targetText = "";
 	if (!is_array(currentTargets)) currentTargets = [currentTargets];
+	if (array_length(currentTargets) == 1) targetText = currentTargets[0].name;
+	else if (currentTargets[0].object_index == obj_BattlingEnemy) targetText = "the enemies";
+	else targetText = "the party";
+	battleText = string_ext(_action.description, [_user.name, targetText]);
 	battleWaitTimeRemaining = battleWaitTimeFrames;
 	
 	with(_user) {
@@ -175,6 +181,7 @@ function BattleStatePerformAction() {
 }
 
 function BattleStateVictoryCheck() {
+	battleText = "";
 	if (!endScreen) {
 		//Did players win?
 		var _unitsDead = true;

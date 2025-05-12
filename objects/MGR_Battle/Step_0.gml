@@ -58,7 +58,7 @@ if (cursor.active) {
 		
 		//Confirm?
 		if (_keyConfirm) {
-			with (MGR_Battle) BeginAction(cursor.activeTarget, cursor.activeAction, cursor.activeTarget);
+			with (MGR_Battle) BeginAction(cursor.activeUser, cursor.activeAction, cursor.activeTarget);
 			with (obj_Menu) instance_destroy();
 			active = false;
 			confirmDelay = 0;

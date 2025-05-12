@@ -94,7 +94,7 @@ function MenuSelectAction(_user, _action)
 
 function MenuSelectDialogue(_nextDialogue) {
 	with (obj_Menu) active = false;
-	
+
 	with (obj_textBox) {
 		makeChoice(_nextDialogue);
 		with (obj_Menu) instance_destroy();

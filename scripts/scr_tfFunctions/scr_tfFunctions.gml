@@ -12,7 +12,8 @@ enum LIMBS {
 	LARM,
 	RARM,
 	LLEG,
-	RLEG
+	RLEG,
+	SPR
 }
 
 enum TRANSFORMS {

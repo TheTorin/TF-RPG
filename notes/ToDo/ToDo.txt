@@ -4,4 +4,3 @@ Implement state machine into player
 Redo all inputs to use the new input system
 	Notably in, you guessed it, the player!
 	
-Battle text! Battle mana?

@@ -115,6 +115,14 @@ if (!endScreen) {
 			}
 		}
 	}
+	
+	if (battleText != "") {
+		var _w = string_width(battleText) + 20;
+		draw_sprite_stretched(spr_Box, 0, x + 160 - (_w * 0.25), y + 5, _w * 0.5, 20);
+		draw_set_halign(fa_center);
+		draw_set_color(c_white);
+		draw_text_transformed(x + 160, y + 10, battleText, 0.5, 0.5, 0);
+	}
 }
 else if (victory) {
 	draw_text_transformed(basePCX + COLUMN_PADDING, basePCY + ROW_PADDING, "Victory! You win!", 0.5, 0.5, 0);	
